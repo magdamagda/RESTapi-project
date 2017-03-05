@@ -1,27 +1,29 @@
 # RESTapi-project - employees management project
 
-Project deployment
+## Project deployment ##
 
-Requirements:
+### Requirements: ###
 - python
 - python-pip
 - curl
 
-git clone https://github.com/magdamagda/RESTapi-project.git <your directory>
+### Installing: ###
+
+`git clone https://github.com/magdamagda/RESTapi-project.git <your directory>
 pip install -r requirements.txt
 
 cd <your directory>
 python db_create.py
 python db_migrate.py
-python db_upgrade.py
+python db_upgrade.py`
 
-Running aplication:
+### Running aplication: ###
 python run.py
 
-Testing application:
+### Testing application: ###
 python tests.py
 
-Using application (using curl on Linux):
+### Using application (using curl on Linux): ###
  - display employees
  curl -i http://localhost:5000/employees
  - add employee
@@ -31,7 +33,7 @@ Using application (using curl on Linux):
  - filter employees by mail
  curl -i http://localhost:5000/email/<email>
  - delete employee
- curl -i -H "Content-Type: application/json" -X DELETE -d http://localhost:5000/employees/<id>
+ curl -i -H "Content-Type: application/json" -X DELETE http://localhost:5000/employees/<id>
 
 
 
