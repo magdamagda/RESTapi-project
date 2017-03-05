@@ -1,6 +1,6 @@
 # RESTapi-project - employees management project
 
-## Project deployment ##
+## Project deployment on Linux ##
 
 ### Requirements: ###
 - python
