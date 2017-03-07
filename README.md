@@ -1,5 +1,7 @@
 # RESTapi-project - employees management project
 
+This is a server application, which offers a simple REST API to employees management in a small company. The application uses Flask framework. Data are stored in SQLite database.  
+
 ## Project deployment on Linux ##
 
 ### Requirements: ###
@@ -17,15 +19,44 @@ python db_create.py
 python db_migrate.py
 python db_upgrade.py
 ```
-### Running aplication: ###
+### Run aplication: ###
 ```
 python run.py
 ```
-### Testing application: ###
+### Application unit tests: ###
 ```
 python tests.py
 ```
-### Using application (using curl on Linux): ###
+### API description: ###
+ - display employees
+ ```
+ Method: GET
+ /employees
+ ```
+ - add employee
+ ```
+ Method: POST
+ Data: {"first_name":"<first name>", "last_name":"<last name>", "email":"<email>"}
+ Content-Type: application/json
+ /employees
+ ```
+ - display employee by id
+ ```
+ Method: GET
+ /employees/<id>
+ ```
+ - filter employees by mail
+ ```
+ Method: GET
+ /email/<email>
+ ```
+ - delete employee by id
+ ```
+ Method: DELETE
+ /employees/<id>
+ ```
+
+### Example how to use the application (with curl on Linux): ###
  - display employees
  ```
  curl -i http://localhost:5000/employees
