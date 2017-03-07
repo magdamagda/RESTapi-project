@@ -28,52 +28,52 @@ python run.py
 python tests.py
 ```
 ### API description: ###
- display employees
+ Display employees
  ```
-     Method: GET
-     /employees
+ Method: GET
+ /employees
  ```
- - add employee
+ Add employee
  ```
  Method: POST
  Data: {"first_name":"<first name>", "last_name":"<last name>", "email":"<email>"}
  Content-Type: application/json
  /employees
  ```
- - display employee by id
+ Display employee by id
  ```
  Method: GET
  /employees/<id>
  ```
- - filter employees by mail
+ Filter employees by mail
  ```
  Method: GET
  /email/<email>
  ```
- - delete employee by id
+ Delete employee by id
  ```
  Method: DELETE
  /employees/<id>
  ```
 
 ### Example how to use the application (with curl on Linux): ###
- - display employees
+ Display employees
  ```
  curl -i http://localhost:5000/employees
  ```
- - add employee
+ Add employee
  ```
  curl -i -H "Content-Type: application/json" -X POST -d '{"first_name":"<first name>", "last_name":"<last name>", "email":"<email>"}' http://localhost:5000/employees
  ```
- - display employee by id
+ Display employee by id
  ```
  curl -i http://localhost:5000/employees/<id>
  ```
- - filter employees by mail
+ Filter employees by mail
  ```
  curl -i http://localhost:5000/email/<email>
  ```
- - delete employee
+ Delete employee
  ```
  curl -i -H "Content-Type: application/json" -X DELETE http://localhost:5000/employees/<id>
  ```
