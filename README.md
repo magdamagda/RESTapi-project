@@ -28,7 +28,7 @@ python run.py
 python tests.py
 ```
 ### API description: ###
- - display employees
+ display employees
  ```
      Method: GET
      /employees
