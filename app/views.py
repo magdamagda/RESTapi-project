@@ -22,7 +22,7 @@ def get_employee(employee_id):
 
 @app.route('/employees/email/<employee_email>', methods=['GET'])
 def get_employee_by_mail(employee_email):
-    employees = models.Employee.query.filter_by(email=employee_email).all()
+    employees = models.Employee.query.filter(models.Employee.email.like("%" + employee_email + "%")).all()
     employees = [e.dict() for e in employees]
     return json.dumps({'employees': employees})
 
