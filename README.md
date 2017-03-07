@@ -30,8 +30,8 @@ python tests.py
 ### API description: ###
  - display employees
  ```
- Method: GET
- /employees
+     Method: GET
+     /employees
  ```
  - add employee
  ```
