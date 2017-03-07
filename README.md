@@ -45,7 +45,7 @@ python tests.py
  Method: GET
  /employees/<id>
  ```
- Filter employees by mail
+ Filter employees by email (you can send a fragment of the email, server will return all employees with maching email)
  ```
  Method: GET
  /email/<email>
